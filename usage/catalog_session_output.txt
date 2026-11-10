@@ -1,0 +1,176 @@
+=== Characters catalog & text game (database: offline samples) ===
+· Type 'help' to list commands, 'exit' to quit.
+> Mode: main
+
+General
+  Command        │ Description
+  ───────────────┼──────────────────────────────
+  help [command] │ list commands or describe one
+  back           │ leave the current mode
+  exit           │ quit the program
+
+Information (read-only)
+  Command                                                │ Description
+  ───────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────
+  ls [char|item|ability] [--filter text]                 │ list characters (default), items or abilities in the catalog
+  show <id|name>                                         │ general information about a character, item or ability (with artwork links)
+  sheet <char_id> [--toc] [--format plain|markdown|html] │ character sheet built with the structured-text system
+  stats                                                  │ damage / healing statistics per character
+
+Actions (change the catalog)
+  Command                                                        │ Description
+  ───────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────
+  create <char|item|ability>                                     │ create a new character / item / ability through a dialog
+  add <char_id> <item_id|ability_id>                             │ equip an item on / teach an ability to a character
+  act <attack|heal|ability> <actor> <target> [--id <ability_id>] │ free-form action between two catalog characters (sandbox)
+  undo                                                           │ undo the last 'act' action (Command + Memento)
+  rm <char_id>                                                   │ remove a character from the catalog (asks for confirmation)
+
+Remote database
+  Command                                          │ Description
+  ─────────────────────────────────────────────────┼─────────────────────────────────────────────
+  db <refresh|chars|weapons|show|create|equip> ... │ remote character database (genshin.jmp.blue)
+
+Storage
+  Command          │ Description
+  ─────────────────┼────────────────────────────────────────────────
+  save [path.json] │ save the catalog (default: saves/catalog.json)
+  load [path.json] │ load a saved catalog (replaces the current one)
+
+Text game
+  Command                                │ Description
+  ───────────────────────────────────────┼───────────────────────────────────────
+  game <roster|start|resume|results> ... │ turn-based battle with your characters
+>   [########################] 4/4 characters
+  [########################] 5/5 weapons
+✓ Database refreshed: 4 character(s) loaded.
+>   Slug      │ Name      │ Vision │ Weapon   │ Rarity │ Nation
+  ──────────┼───────────┼────────┼──────────┼────────┼──────────
+  albedo    │ Albedo    │ Geo    │ Sword    │ ★★★★★  │ Mondstadt
+  bennett   │ Bennett   │ Pyro   │ Sword    │ ★★★★   │ Mondstadt
+  diluc     │ Diluc     │ Pyro   │ Claymore │ ★★★★★  │ Mondstadt
+  xiangling │ Xiangling │ Pyro   │ Polearm  │ ★★★★   │ Liyue
+· 4 total
+>   Slug      │ Name      │ Vision │ Weapon  │ Rarity │ Nation
+  ──────────┼───────────┼────────┼─────────┼────────┼──────────
+  albedo    │ Albedo    │ Geo    │ Sword   │ ★★★★★  │ Mondstadt
+  xiangling │ Xiangling │ Pyro   │ Polearm │ ★★★★   │ Liyue
+· 2 total
+>   Slug              │ Name              │ Type     │ Rarity │ Base ATK
+  ──────────────────┼───────────────────┼──────────┼────────┼─────────
+  favonius-sword    │ Favonius Sword    │ Sword    │ ★★★★   │ 41
+  serpent-spine     │ Serpent Spine     │ Claymore │ ★★★★   │ 42
+  skyward-blade     │ Skyward Blade     │ Sword    │ ★★★★★  │ 44
+  the-catch         │ The Catch         │ Polearm  │ ★★★★   │ 42
+  wolf-s-gravestone │ Wolf's Gravestone │ Claymore │ ★★★★★  │ 46
+> Albedo — Kreideprinz
+  Vision         Geo
+  Weapon         Sword
+  Rarity         ★★★★★
+  Nation         Mondstadt
+  A genius known as the Kreideprinz, he is the Chief Alchemist and Captain of
+  the Investigation Team of the Knights of Favonius.
+  Talents:
+    - Favonius Bladework - Weiss (Normal Attack)
+    - Abiogenesis: Solar Isotoma (Elemental Skill)
+    - Rite of Progeniture: Tectonic Tide (Elemental Burst)
+  ↗ icon-big     https://genshin.jmp.blue/characters/albedo/icon-big
+  ↗ card         https://genshin.jmp.blue/characters/albedo/card
+  ↗ gacha-splash https://genshin.jmp.blue/characters/albedo/gacha-splash
+> Skyward Blade
+  Type           Sword
+  Rarity         ★★★★★
+  Base ATK       44
+  Sub stat       Energy Recharge
+  Sky-Piercing Fang CRIT Rate increased by 4%. Gains Skypiercing Might upon using
+                 an Elemental Burst:
+                 Increases Movement SPD by 10%, increases ATK SPD by 10%, and
+                 increases the DMG of Normal and Charged Attack hits by 20%
+                 for 12s.
+  ↗ icon         https://genshin.jmp.blue/weapons/skyward-blade/icon
+> ✓ Created Albedo as [c1] — Albedo [HP: 118/118, Armor: 10, Attack: 21]
+> ✓ Created Diluc as [c2] — Diluc [HP: 139/139, Armor: 13, Attack: 22]
+> ✓ Diluc equips Wolf's Gravestone [i1] — Diluc [HP: 139/139, Armor: 13, Attack: 31]
+> ✗ Albedo cannot equip Wolf's Gravestone: needs Sword, weapon is Claymore.
+> · New character (Enter keeps the default in brackets, '-' skips optional fields)
+  Name:   Health [100]:     ! 'abc' is not valid here
+  Health [100]:   Armor [0]:   Attack power [10]:   Weapon type (Sword/Claymore/Polearm/Bow/Catalyst) [-]:   Vision (Anemo/Cryo/Dendro/Electro/Geo/Hydro/Pyro) [-]:   Image URL or file path [-]: ✓ Created character 'Ragnar' as [c3].
+>   Item name: · Stat modifiers (0 = no bonus)
+  health bonus [0]:   armor bonus [0]:   attack_power bonus [0]:   Weapon type (Sword/Claymore/Polearm/Bow/Catalyst, '-' = any) [-]: ✓ Created item 'Iron Shield' as [i2].
+>     1) power_strike
+    2) fireball
+    3) healing_light
+  Ability type:   Heal amount [15]: ✓ Created ability 'Healing Light' as [a1].
+> ✓ Equipped 'Iron Shield' on Ragnar.
+> ✓ Taught 'Healing Light' to Ragnar.
+>   ID │ Name   │ HP      │ Armor │ Attack │ Vision │ Weapon   │ Rarity
+  ───┼────────┼─────────┼───────┼────────┼────────┼──────────┼───────
+  c1 │ Albedo │ 118/118 │ 10    │ 21     │ Geo    │ Sword    │ ★★★★★
+  c2 │ Diluc  │ 139/139 │ 13    │ 31     │ Pyro   │ Claymore │ ★★★★★
+  c3 │ Ragnar │ 160/160 │ 10    │ 20     │        │ Claymore │
+· 3 character(s). 'show <id>' for details.
+>   ID │ Name              │ Type     │ Bonuses              │ Used by
+  ───┼───────────────────┼──────────┼──────────────────────┼────────
+  i1 │ Wolf's Gravestone │ Claymore │ attack_power +9      │ Diluc
+  i2 │ Iron Shield       │          │ health +10, armor +5 │ Ragnar
+>   ID │ Name          │ Known by
+  ───┼───────────────┼─────────
+  a1 │ Healing Light │ Ragnar
+> Ragnar
+  HP             ████████████████████ 160/160
+  Armor          10
+  Attack         20
+  Weapon         Claymore
+  Abilities:
+    - Healing Light
+  Equipment:
+    - Iron Shield
+  ↗ image        https://example.com/ragnar.png
+> Albedo — Kreideprinz
+  HP             ████████████████████ 118/118
+  Armor          10
+  Attack         21
+  Vision         Geo
+  Weapon         Sword
+  Rarity         ★★★★★
+  Nation         Mondstadt
+  A genius known as the Kreideprinz, he is the Chief Alchemist and Captain of
+  the Investigation Team of the Knights of Favonius.
+  Abilities:
+    - Favonius Bladework - Weiss
+    - Abiogenesis: Solar Isotoma
+    - Rite of Progeniture: Tectonic Tide
+  Equipment:
+    - (none)
+  ↗ icon-big     https://genshin.jmp.blue/characters/albedo/icon-big
+  ↗ card         https://genshin.jmp.blue/characters/albedo/card
+  ↗ gacha-splash https://genshin.jmp.blue/characters/albedo/gacha-splash
+> - Albedo
+  - Stats
+  - Talents
+    - Favonius Bladework - Weiss
+    - Abiogenesis: Solar Isotoma
+    - Rite of Progeniture: Tectonic Tide
+  - Equipment
+> Ragnar attacks Diluc for 7 damage (target HP: 132/139).
+> Undone: Ragnar attacks Diluc for 7 damage (target HP: 132/139).
+> Combat statistics
+  Character │ Actions │ Dealt │ Taken │ Healed
+  ──────────┼─────────┼───────┼───────┼───────
+  Diluc     │ 0       │ 0     │ 0     │ 0
+  Ragnar    │ 0       │ 0     │ 0     │ 0
+> ✓ Saved catalog to saves/catalog.json
+> ✓ Removed Ragnar.
+>   ID │ Name   │ HP      │ Armor │ Attack │ Vision │ Weapon   │ Rarity
+  ───┼────────┼─────────┼───────┼────────┼────────┼──────────┼───────
+  c1 │ Albedo │ 118/118 │ 10    │ 21     │ Geo    │ Sword    │ ★★★★★
+  c2 │ Diluc  │ 139/139 │ 13    │ 31     │ Pyro   │ Claymore │ ★★★★★
+· 2 character(s). 'show <id>' for details.
+> ✓ Loaded 3 character(s) from saves/catalog.json
+>   ID │ Name   │ HP      │ Armor │ Attack │ Vision │ Weapon   │ Rarity
+  ───┼────────┼─────────┼───────┼────────┼────────┼──────────┼───────
+  c1 │ Albedo │ 118/118 │ 10    │ 21     │ Geo    │ Sword    │ ★★★★★
+  c2 │ Diluc  │ 139/139 │ 13    │ 31     │ Pyro   │ Claymore │ ★★★★★
+  c3 │ Ragnar │ 160/160 │ 10    │ 20     │        │ Claymore │
+· 3 character(s). 'show <id>' for details.
+> 

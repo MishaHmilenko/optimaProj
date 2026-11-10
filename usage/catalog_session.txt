@@ -1,0 +1,46 @@
+help
+db refresh --weapons
+db chars
+db chars --filter a
+db weapons
+db show char albedo
+db show weapon skyward-blade
+db create albedo
+db create diluc
+db equip c2 wolf-s-gravestone
+db equip c1 wolf-s-gravestone
+create char
+Ragnar
+abc
+150
+5
+20
+claymore
+-
+https://example.com/ragnar.png
+create item
+Iron Shield
+10
+5
+0
+-
+create ability
+3
+20
+add c3 i2
+add c3 a1
+ls
+ls item
+ls ability
+show c3
+show Albedo
+sheet c1 --toc
+act attack c3 c2
+undo
+stats
+save
+rm c3 --yes
+ls
+load
+ls
+exit

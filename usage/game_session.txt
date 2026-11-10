@@ -1,0 +1,17 @@
+load
+game roster
+game start --team c2,c3 --enemies c1
+skill 3 1
+attack
+status
+save
+back
+game resume
+defend
+skill 2
+heal 2
+attack
+attack
+attack
+game results
+exit

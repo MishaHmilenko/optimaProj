@@ -1,0 +1,26 @@
+=== Text document ===
+· Type 'help' to list commands, 'exit' to quit.
+> Heading title: Level [1]: Added heading 'Introduction' as [h1].
+> Paragraph text: Added paragraph as [p1].
+> Heading title: Level [1]: Added heading 'Details' as [h2].
+> Link label: URL: Added link as [l1].
+> /
+> Already at the root.
+> # Introduction
+Hello from the CLI practical.
+## Details
+See docs (https://example.com)
+> [h1] # Introduction
+[p1] Hello from the CLI practical.
+[h2] ## Details
+[l1] See docs (https://example.com)
+> /Introduction
+> No such element here: Details
+> /
+> Saved document to state_text.json
+> Loaded document from state_text.json
+> # Introduction
+Hello from the CLI practical.
+## Details
+See docs (https://example.com)
+> 

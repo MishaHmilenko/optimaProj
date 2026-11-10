@@ -1,0 +1,22 @@
+add container heading
+Introduction
+1
+add leaf paragraph
+Hello from the CLI practical.
+add container heading
+Details
+2
+add leaf link
+See docs
+https://example.com
+pwd
+up
+print --whole
+print --id
+cd Introduction
+rm Details
+up
+save state_text.json
+load state_text.json
+print --whole
+exit

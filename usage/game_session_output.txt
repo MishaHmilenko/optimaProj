@@ -1,0 +1,85 @@
+=== Characters catalog & text game (database: offline samples) ===
+· Type 'help' to list commands, 'exit' to quit.
+> ✓ Loaded 3 character(s) from saves/catalog.json
+>   ID │ Name   │ HP  │ Armor │ Attack │ Abilities
+  ───┼────────┼─────┼───────┼────────┼──────────
+  c1 │ Albedo │ 118 │ 10    │ 21     │ 3
+  c2 │ Diluc  │ 139 │ 13    │ 31     │ 3
+  c3 │ Ragnar │ 160 │ 10    │ 20     │ 1
+> ✓ The battle begins! Type 'help' for actions, 'status' to look around.
+Round 1 — in progress
+  Your team:
+  # │ Hero     │ HP      │ Armor │ Attack │ State
+  ──┼──────────┼─────────┼───────┼────────┼──────
+  1 │ > Diluc  │ 139/139 │ 13    │ 31     │ ok
+  2 │   Ragnar │ 160/160 │ 10    │ 20     │ ok
+  Enemies:
+  # │ Enemy    │ HP      │ Armor │ Attack │ State
+  ──┼──────────┼─────────┼───────┼────────┼──────
+  1 │   Albedo │ 118/118 │ 10    │ 21     │ ok
+  Turn           Diluc
+  Abilities:
+    - Tempered Sword
+    - Searing Onslaught
+    - Dawn
+battle> Diluc uses Dawn on Albedo for 68 damage!
+· Round 1 · Ragnar's turn (HP 160/160) · enemies: 1) Albedo 50/118
+battle> Ragnar attacks Albedo for 10 damage (target HP: 40/118).
+Albedo uses Rite of Progeniture: Tectonic Tide on Diluc for 39 damage!
+· Round 2 · Diluc's turn (HP 100/139) · enemies: 1) Albedo 40/118
+battle> Round 2 — in progress
+  Your team:
+  # │ Hero     │ HP      │ Armor │ Attack │ State
+  ──┼──────────┼─────────┼───────┼────────┼──────
+  1 │ > Diluc  │ 100/139 │ 13    │ 31     │ ok
+  2 │   Ragnar │ 160/160 │ 10    │ 20     │ ok
+  Enemies:
+  # │ Enemy    │ HP     │ Armor │ Attack │ State
+  ──┼──────────┼────────┼───────┼────────┼──────
+  1 │   Albedo │ 40/118 │ 10    │ 21     │ ok
+  Turn           Diluc
+  Abilities:
+    - Tempered Sword
+    - Searing Onslaught
+    - Dawn
+battle> ✓ Battle saved to saves/battle.json
+battle> > ✓ The battle begins! Type 'help' for actions, 'status' to look around.
+Round 2 — in progress
+  Your team:
+  # │ Hero     │ HP      │ Armor │ Attack │ State
+  ──┼──────────┼─────────┼───────┼────────┼──────
+  1 │ > Diluc  │ 100/139 │ 13    │ 31     │ ok
+  2 │   Ragnar │ 160/160 │ 10    │ 20     │ ok
+  Enemies:
+  # │ Enemy    │ HP     │ Armor │ Attack │ State
+  ──┼──────────┼────────┼───────┼────────┼──────
+  1 │   Albedo │ 40/118 │ 10    │ 21     │ ok
+  Turn           Diluc
+  Abilities:
+    - Tempered Sword
+    - Searing Onslaught
+    - Dawn
+battle> · Diluc takes a defensive stance.
+· Round 2 · Ragnar's turn (HP 160/160) · enemies: 1) Albedo 40/118
+battle> ✗ Ragnar knows 1 ability: use a number from 1 to 1.
+battle> ✗ Ragnar is already at full health.
+battle> Ragnar attacks Albedo for 10 damage (target HP: 30/118).
+Albedo attacks Diluc for 4 damage (target HP: 96/139).
+· Round 3 · Diluc's turn (HP 96/139) · enemies: 1) Albedo 30/118
+battle> Diluc attacks Albedo for 21 damage (target HP: 9/118).
+· Round 3 · Ragnar's turn (HP 160/160) · enemies: 1) Albedo 9/118
+battle> Ragnar attacks Albedo for 10 damage (target HP: 0/118).
+Battle result: VICTORY
+  Rounds         3
+  Team           Diluc, Ragnar
+  Enemies        Albedo
+  Survivors      Diluc, Ragnar
+  Damage dealt   118
+  Damage taken   43
+  Finished       2026-11-10T23:29:43
+✓ Result saved to saves/results.json
+>   # │ When                │ Outcome │ Rounds │ Team          │ Enemies │ Dealt │ Taken
+  ──┼─────────────────────┼─────────┼────────┼───────────────┼─────────┼───────┼──────
+  1 │ 2026-11-10 23:29:43 │ victory │ 3      │ Diluc, Ragnar │ Albedo  │ 118   │ 43
+· 1 battle(s), 1 victory.
+> 
